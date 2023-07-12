@@ -1,0 +1,68 @@
+.show-btn {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  background-color: var(--core-content-background-100);
+  overflow: hidden;
+
+  & .show-btn__btn {
+    width: 100%;
+    height: 100%;
+    margin: 6px auto;
+    font-size: 1.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: none;
+    border: 0px;
+    user-select: none;
+    color: var(--core-text-color);
+
+    &:last-child {
+      font-weight: medium;
+      color: var(--core-text-color);
+      background-color: color-mix(
+        in srgb,
+        #48b1bf,
+        var(--core-content-background-100) 25%
+      );
+    }
+
+    &:active {
+      background-color: color-mix(
+        in srgb,
+        #48b1bf,
+        var(--core-content-background-100) 25%
+      );
+      color: var(--core-text-inverted);
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  & .show-btn__equal {
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+
+  & .show-btn__exp {
+    color: color-mix(in srgb, #48b1bf, var(--core-content-background-300) 20%);
+  }
+
+  & .show-btn__clr {
+    color: #d66d75;
+  }
+
+  @media screen and (pointer: coarse) {
+    & .btn {
+      &:hover {
+        background-color: color-mix(
+          in srgb,
+          #48b1bf,
+          var(--core-content-background-100) 25%
+        );
+        color: var(--core-text-inverted);
+        transition: background-color 200ms ease;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 25%;
+  background: color-mix(
+    in srgb,
+    #48b1bf,
+    var(--core-content-background-100) 25%
+  );
+  border-radius: 1.25rem 1.25rem 0 0;
+
+  & .display__theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    position: absolute;
+    inset: 0.6rem auto auto 0.6rem;
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.4rem;
+    font-size: 1rem;
+    color: var(--core-text-color);
+    background-color: var(--core-content-background-200);
+    text-transform: capitalize;
+    cursor: pointer;
+
+    & svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      fill: var(--core-text-color);
+    }
+  }
+
+  & .display__input,
+  & .display__value {
+    text-align: right;
+    background-color: transparent;
+    color: var(--core-text-color);
+    border: 0px;
+    letter-spacing: 1.5px;
+    padding: 0.35rem 1.5rem;
+    outline: 0;
+
+    &:disabled,
+    &:disabled {
+      opacity: 1;
+    }
+
+    &::placeholder,
+    &::placeholder {
+      color: var(--core-text-color);
+    }
+  }
+
+  & .display__input {
+    font-size: 3rem;
+    max-width: 75%;
+  }
+
+  & .display__value {
+    font-size: 1rem;
+  }
+}

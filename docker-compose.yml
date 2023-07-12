@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  acol_calculator:
+    image: httpd:latest
+    container_name: acol_calculator
+    ports:
+      - "8060:80"
+    volumes:
+      - ./build:/usr/local/apache2/htdocs
+    networks:
+      - acol-network
+
+networks:
+  acol-network:
+    external: true
